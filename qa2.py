@@ -136,10 +136,23 @@ class MNLISyntacticRegularizer(object):
                     # Personal pronoun, very complex NP, or parse error
                     continue
 
+                lookup = en.tenses(vp_head[0])
+
+                if len(lookup) == 0:
+                    if vp_head[0][-2:]:
+                        tense = en.PAST
+                    else:
+                        tense = en.PRESENT
+                else:
+                    if en.tenses(vp_head[0])[0][0] == u'past':
+                        tense = en.PAST
+                    else:
+                        tense = en.PRESENT
+
                 subjobj_rev_hyp = ' '.join([
                     upper_first(direct_object),
                     # FIXME: keep tense
-                    en.conjugate(vp_head[0], number=object_number),
+                    en.conjugate(vp_head[0], number=object_number, tense = tense),
                     lower_first(subj)]) + '.'
 
                 passive_hyp_same_meaning = ' '.join([
@@ -150,7 +163,7 @@ class MNLISyntacticRegularizer(object):
                 passive_hyp_inverted = ' '.join([
                     subj,
                     self.passivize_vp(s[k], subject_number),
-                    direct_object])
+                    direct_object]) + '.'
 
                 #print(subjobj_rev_hyp)
                 if j['gold_label'] == 'entailment':
