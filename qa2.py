@@ -71,10 +71,10 @@ class MNLISyntacticRegularizer(object):
         return csv.writer(open(filename, 'w'), delimiter='\t', encoding='utf-8')
 
     def loop(self, debug=False):
-        w_subjobj_orig = self.tsv('subj_obj_orig_premise.tsv')
-        w_subjobj_hap = self.tsv('subj_obj_hyp_as_premise.tsv')
-        w_passive_orig = self.tsv('passive_orig_premise.tsv')
-        w_passive_hap = self.tsv('passive_hyp_as_premise.tsv')
+        w_subjobj_orig = self.tsv('inv_orig.tsv')
+        w_subjobj_hap = self.tsv('inv_trsf.tsv')
+        w_passive_orig = self.tsv('pass_orig.tsv')
+        w_passive_hap = self.tsv('pass_trsf.tsv')
 
         self.lines = open(mnli_train).readlines()
         already_seen = set()
@@ -151,7 +151,7 @@ class MNLISyntacticRegularizer(object):
 
                 subjobj_rev_hyp = ' '.join([
                     upper_first(direct_object),
-                    # FIXME: keep tense
+                    #keep tense
                     en.conjugate(vp_head[0], number=object_number, tense = tense),
                     lower_first(subj)]) + '.'
 
@@ -165,7 +165,7 @@ class MNLISyntacticRegularizer(object):
                     self.passivize_vp(s[k], subject_number),
                     direct_object]) + '.'
 
-                #print(subjobj_rev_hyp)
+
                 if j['gold_label'] == 'entailment':
                     self.mnli_row(w_subjobj_orig, 1000000 + n,
                             j['sentence1'], subjobj_rev_hyp, 'neutral')
@@ -199,8 +199,7 @@ class MNLISyntacticRegularizer(object):
                 vp = nested_vps[0]
             if vp[0].label().startswith('VB'):
                 head = vp[0][0].lower()
-	#print(vp)
-	#print(type(vp[0]))
+
         return (head, vp[0].label())
 
     def passivize_vp(self, vp, subj_num=en.SINGULAR):
