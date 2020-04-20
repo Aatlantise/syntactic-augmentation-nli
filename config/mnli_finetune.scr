@@ -1,0 +1,28 @@
+#!/bin/bash
+#SBATCH --partition=gpuk80
+#SBATCH --gres=gpu:1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=6
+#SBATCH --job-name=GPU-SEQ
+#SBATCH --time=48:0:0
+#SBATCH --mail-type=end
+#SBATCH --mail-user=jmin10@jhu.edu
+#SBATCH --output=mnli_train.log
+#SBATCH --error=mnli_train.err
+
+
+module load cuda
+module load singularity
+
+# this works on MARCC, work on Lustre /scratch
+#mkdir -p /scratch/users/$USER/tensorflow_run
+#cd /scratch/users/$USER/tensorflow_run
+
+singularity pull --name tensorflow.simg shub://marcc-hpc/tensorflow
+
+
+# redefine SINGULARITY_HOME to mount current working directory to base $HOME
+export SINGULARITY_HOME=$PWD:/home/$USER
+
+singularity exec --nv ./tensorflow.simg ./bert_mnli.sh
+

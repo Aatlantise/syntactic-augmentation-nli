@@ -1,0 +1,101 @@
+1000889	ba	ba	ba	ba	ba	ba	ba	The regulatees enjoy the many benefits associated with being in the regime.	The regulatees are enjoyed by the many benefits associated with being in the regime.	ba	neutral
+1002467	ba	ba	ba	ba	ba	ba	ba	The hotel offers a great view of the Puerta del Sol.	The hotel is offered by a great view of the Puerta del Sol.	ba	neutral
+1001181	ba	ba	ba	ba	ba	ba	ba	The answer needed a headline.	The answer was needed by a headline.	ba	neutral
+1000258	ba	ba	ba	ba	ba	ba	ba	The Northeast contains an ancient Roman road, which is now a favorite hiking trail.	The Northeast is contained by an ancient Roman road , which is now a favorite hiking trail.	ba	neutral
+1000131	ba	ba	ba	ba	ba	ba	ba	The EPA cited those sections.	The EPA was cited by those sections.	ba	neutral
+2000289	ba	ba	ba	ba	ba	ba	ba	The EPA considered the future compliance costs.	The future compliance costs were considered by the EPA.	ba	entailment
+2002955	ba	ba	ba	ba	ba	ba	ba	the book gives a good overview for its intended readers.	A good overview for its intended readers is given by the book.	ba	entailment
+2002231	ba	ba	ba	ba	ba	ba	ba	The huge bird kept flying onward toward the goal.	Flying onward toward the goal was kept by the huge bird.	ba	entailment
+1002453	ba	ba	ba	ba	ba	ba	ba	The temple contains many carvings of Hatshepsut.	The temple is contained by many carvings of Hatshepsut.	ba	neutral
+2001998	ba	ba	ba	ba	ba	ba	ba	The American Dream makes a lot of money when it's in a movie.	A lot of money when it 's in a movie is made by the American Dream.	ba	entailment
+2000590	ba	ba	ba	ba	ba	ba	ba	The shrine receives less than a thousand visitors a year.	Less than a thousand visitors a year are received by the shrine.	ba	entailment
+1000704	ba	ba	ba	ba	ba	ba	ba	The missile needed a lot of planning into it.	The missile was needed by a lot of planning into it.	ba	neutral
+2001248	ba	ba	ba	ba	ba	ba	ba	The assessment outlines each step taken in detail.	Each step taken in detail is outlined by the assessment.	ba	entailment
+1002022	ba	ba	ba	ba	ba	ba	ba	The room seemed weather proof. 	The room was seemed by weather proof.	ba	neutral
+2002200	ba	ba	ba	ba	ba	ba	ba	The second platform boasts a fancy gourmet restaurant.	A fancy gourmet restaurant are boasted by the second platform.	ba	entailment
+2002034	ba	ba	ba	ba	ba	ba	ba	The FDA summarized its Final Regulatory Flexibility Analysis.  	Its Final Regulatory Flexibility Analysis were summarized by the FDA.	ba	entailment
+2002644	ba	ba	ba	ba	ba	ba	ba	No one said anything.	Anything was said by no one.	ba	entailment
+2002739	ba	ba	ba	ba	ba	ba	ba	The former palace contains a collection with many treasures. 	A collection with many treasures is contained by the former palace.	ba	entailment
+2000006	ba	ba	ba	ba	ba	ba	ba	The president made wrong statements.	Wrong statements were made by the president.	ba	entailment
+1000395	ba	ba	ba	ba	ba	ba	ba	The 20 to 25 year old group discovered rock and roll.	The 20 to 25 year old group was discovered by rock and roll.	ba	neutral
+2000892	ba	ba	ba	ba	ba	ba	ba	A sidebar profiles nine firebrands not including Phil Gramm, Sam Brownback, and Rick Santorum.	Nine firebrands not including Phil Gramm , Sam Brownback , and Rick Santorum are profiled by a sidebar.	ba	entailment
+2003117	ba	ba	ba	ba	ba	ba	ba	The mixture creates an unique style that is nowhere to be seen elsewhere.	An unique style that is nowhere to be seen elsewhere is created by the mixture.	ba	entailment
+1000169	ba	ba	ba	ba	ba	ba	ba	The inspector claimed the wood of the chair needed to be replaced.	The inspector was claimed by the wood of the chair needed to be replaced.	ba	neutral
+1001489	ba	ba	ba	ba	ba	ba	ba	The appendix describes the numerical model.	The appendix is described by the numerical model.	ba	neutral
+2002848	ba	ba	ba	ba	ba	ba	ba	The analysis describes the regulatory options that are available to reduce the risk of an outbreak of BSE in ths US.	The regulatory options that are available to reduce the risk of an outbreak of BSE in ths US are described by the analysis.	ba	entailment
+1002181	ba	ba	ba	ba	ba	ba	ba	The Olafsons like the people that bought the restaurant.	The Olafsons is liked by the people that bought the restaurant.	ba	neutral
+1000401	ba	ba	ba	ba	ba	ba	ba	The publication says everything about her. 	The publication is said by everything about her.	ba	neutral
+1002075	ba	ba	ba	ba	ba	ba	ba	The doubters needed more dairy.	The doubters were needed by more dairy.	ba	neutral
+1001532	ba	ba	ba	ba	ba	ba	ba	The LSC launched multiple initiatives.	The LSC was launched by multiple initiatives.	ba	neutral
+2000926	ba	ba	ba	ba	ba	ba	ba	The Chinese government threatened villagers who did interviews with Becker.	Villagers who did interviews with Becker were threatened by the Chinese government.	ba	entailment
+1002050	ba	ba	ba	ba	ba	ba	ba	The FDA requires the establishment of educational programs.	The FDA is required by the establishment of educational programs.	ba	neutral
+1000252	ba	ba	ba	ba	ba	ba	ba	The DOD follows eight rules for best practices.	The DOD is followed by eight rules for best practices.	ba	neutral
+2002781	ba	ba	ba	ba	ba	ba	ba	Both scenarios include a projection of 53,000 MWe of FGD retrofits.	A projection of 53,000 MWe of FGD retrofits is included by both scenarios.	ba	entailment
+1000911	ba	ba	ba	ba	ba	ba	ba	The Olympics fabricates a lot of its stories.	The Olympics is fabricated by a lot of its stories.	ba	neutral
+2002261	ba	ba	ba	ba	ba	ba	ba	The dialogue sets the stage.	The stage is set by the dialogue.	ba	entailment
+2002004	ba	ba	ba	ba	ba	ba	ba	This guide provides a framework to evaluate acquired information technology and use it to make a healthy profit.	A framework to evaluate acquired information technology and use it to make a healthy profit is provided by this guide.	ba	entailment
+1000699	ba	ba	ba	ba	ba	ba	ba	The collection includes sculptures as well as paintings. 	The collection is included by sculptures as well as paintings.	ba	neutral
+2000955	ba	ba	ba	ba	ba	ba	ba	The house makes a snake pen for a local family.	A snake pen for a local family are made by the house.	ba	entailment
+2001884	ba	ba	ba	ba	ba	ba	ba	Every single doctor provided good care and low bills.	Good care and low bills was provided by every single doctor.	ba	entailment
+2001678	ba	ba	ba	ba	ba	ba	ba	The man made so many stupid and foolish choices.	So many stupid and foolish choices were made by the man.	ba	entailment
+1000945	ba	ba	ba	ba	ba	ba	ba	The city lacks diversity and culture.	The city is lacked by diversity and culture.	ba	neutral
+2001875	ba	ba	ba	ba	ba	ba	ba	The agencies addressed the staffing changes.	The staffing changes were addrest by the agencies.	ba	entailment
+2001200	ba	ba	ba	ba	ba	ba	ba	The tabloid interviews Kirk Douglas, who reveals how he was seduced by his English teacher at 14. 	Kirk Douglas , who reveals how he was seduced by his English teacher at 14 are interviewed by the tabloid.	ba	entailment
+2001592	ba	ba	ba	ba	ba	ba	ba	The GAO-Sponsodered symposium sponsored 20 different research studies. 	20 different research studies were sponsored by the GAO-Sponsodered symposium.	ba	entailment
+2000856	ba	ba	ba	ba	ba	ba	ba	The Mechanic shook his head.	His head was shaken by the Mechanic.	ba	entailment
+1002881	ba	ba	ba	ba	ba	ba	ba	The federal agencies kept the information current.	The federal agencies were kept by the information current.	ba	neutral
+1002767	ba	ba	ba	ba	ba	ba	ba	The stories showed people in Turkey what it was like for the poor in China.	The stories were shown by people in Turkey what it was like for the poor in China.	ba	neutral
+1001271	ba	ba	ba	ba	ba	ba	ba	The fleece gets irreversible damage when you fall onto nubby carpet, as I did on purpose.	The fleece is gotten by irreversible damage when you fall onto nubby carpet , as I did on purpose.	ba	neutral
+1001125	ba	ba	ba	ba	ba	ba	ba	The special things include a sale, book signing, or celebrity sighting.	The special things are included by a sale , book signing , or celebrity sighting.	ba	neutral
+2000424	ba	ba	ba	ba	ba	ba	ba	The view includes beautiful natural landscapes.	Beautiful natural landscapes are included by the view.	ba	entailment
+1002292	ba	ba	ba	ba	ba	ba	ba	The computer does the hard work of supplying which Zip Code goes where.	The computer is done by the hard work of supplying which Zip Code goes where.	ba	neutral
+1000265	ba	ba	ba	ba	ba	ba	ba	The 11th-century donjon formed the town's northern defenses.	The 11th-century donjon was formed by the town 's northern defenses.	ba	neutral
+2001228	ba	ba	ba	ba	ba	ba	ba	The TRLA uses a Linux based computer system to store student information.	A Linux based computer system to store student information is used by the TRLA.	ba	entailment
+2001489	ba	ba	ba	ba	ba	ba	ba	The appendix describes the numerical model.	The numerical model is described by the appendix.	ba	entailment
+2001324	ba	ba	ba	ba	ba	ba	ba	The remarkable inner sanctuary took 1000's of years to be mastered.	1000 's of years to be mastered was taken by the remarkable inner sanctuary.	ba	entailment
+1001622	ba	ba	ba	ba	ba	ba	ba	The regulations explain the lowest level of acceptable quality.	The regulations are explained by the lowest level of acceptable quality.	ba	neutral
+1000446	ba	ba	ba	ba	ba	ba	ba	The website sold no t-shirts.	The website was sold by no t-shirts.	ba	neutral
+2001769	ba	ba	ba	ba	ba	ba	ba	The beach provides lots of delights.	Lots of delights are provided by the beach.	ba	entailment
+1001634	ba	ba	ba	ba	ba	ba	ba	No one showed an effect.	No one was shown by an effect.	ba	neutral
+2003118	ba	ba	ba	ba	ba	ba	ba	The results show a lot. 	A lot is shown by the results.	ba	entailment
+1001274	ba	ba	ba	ba	ba	ba	ba	These money changers offer rates that are much better than the local banks.	These money is changerred by offer rates that are much better than the local banks.	ba	neutral
+2001708	ba	ba	ba	ba	ba	ba	ba	The children appreciated the gifts.	The gifts were appreciated by the children.	ba	entailment
+1000346	ba	ba	ba	ba	ba	ba	ba	The locals tell tales of two brothers that died after lying.	The locals are told by tales of two brothers that died after lying.	ba	neutral
+1000016	ba	ba	ba	ba	ba	ba	ba	The inside lacked a lot of space.	The inside was lacked by a lot of space.	ba	neutral
+1003055	ba	ba	ba	ba	ba	ba	ba	The religious ceremony lasts one hour, while the celebration stretches into the night.	The religious ceremony is lasted by one hour , while the celebration stretches into the night.	ba	neutral
+1000575	ba	ba	ba	ba	ba	ba	ba	All migration takes place in December or January.	All migration is taken by place in December or January.	ba	neutral
+2002573	ba	ba	ba	ba	ba	ba	ba	The Cabinet posses the Executive power.	The Executive power are possed by the Cabinet.	ba	entailment
+2000053	ba	ba	ba	ba	ba	ba	ba	The policeman produced a key that worked in every lock.	A key that worked in every lock was produced by the policeman.	ba	entailment
+1002456	ba	ba	ba	ba	ba	ba	ba	The increasing turmoil gave room to bloodshed in Bengal, Bihar, and the Punjab which resulted in Lord Mountbatten to uphold a decree making the British departure as swift as it can be.	The increasing turmoil was given by room to bloodshed in Bengal , Bihar , and the Punjab which resulted in Lord Mountbatten to uphold a decree making the British departure as swift as it can be.	ba	neutral
+1001373	ba	ba	ba	ba	ba	ba	ba	The agency discusses the Clean Air Act in chapter 3 of the book. 	The agency is discussed by the Clean Air Act in chapter 3 of the book.	ba	neutral
+1001381	ba	ba	ba	ba	ba	ba	ba	The Figure depicts a boiler equipped with an ESP.	The Figure is depicted by a boiler equipped with an ESP.	ba	neutral
+1000958	ba	ba	ba	ba	ba	ba	ba	The law sees no distinction between conscious and unconscious behavior.	The law is seen by no distinction between conscious and unconscious behavior.	ba	neutral
+1000877	ba	ba	ba	ba	ba	ba	ba	The Globe published an article that included things I've said about my ex.	The Globe was published by an article that included things I 've said about my ex.	ba	neutral
+2003060	ba	ba	ba	ba	ba	ba	ba	The bear escaped the trap.	The trap was escapped by the bear.	ba	entailment
+2000050	ba	ba	ba	ba	ba	ba	ba	The Kal cracked his neck.	His neck was cracked by the Kal.	ba	entailment
+1000453	ba	ba	ba	ba	ba	ba	ba	The second table includes some depiction of a comparison of labor costs per transaction.	The second table is included by some depiction of a comparison of labor costs per transaction.	ba	neutral
+2001730	ba	ba	ba	ba	ba	ba	ba	The event included many clients.	Many clients were included by the event.	ba	entailment
+1001151	ba	ba	ba	ba	ba	ba	ba	The agency requires certification.	The agency is required by certification.	ba	neutral
+1002418	ba	ba	ba	ba	ba	ba	ba	The analysis mentioned only the cattle transportation.	The analysis was mentioned by only the cattle transportation.	ba	neutral
+2002239	ba	ba	ba	ba	ba	ba	ba	The man wore a hat.	A hat was worn by the man.	ba	entailment
+1002960	ba	ba	ba	ba	ba	ba	ba	The cast includes hundreds of characters and animals.	The cast is included by hundreds of characters and animals.	ba	neutral
+2000377	ba	ba	ba	ba	ba	ba	ba	The mailer achieves higher productivity levels.	Higher productivity levels are achieved by the mailer.	ba	entailment
+2000316	ba	ba	ba	ba	ba	ba	ba	The magazine changed its methodology.	Its methodology was changed by the magazine.	ba	entailment
+2001958	ba	ba	ba	ba	ba	ba	ba	The analysis describes small entities to which the pollution reduction rule will apply.	Small entities to which the pollution reduction rule will apply are described by the analysis.	ba	entailment
+1001392	ba	ba	ba	ba	ba	ba	ba	The author exposed his protagonist's secret motives.	The author was exposed by his protagonist 's secret motives.	ba	neutral
+1002018	ba	ba	ba	ba	ba	ba	ba	The final rule relates the tail pipe emissions of naval airplanes. 	The final rule is related by the tail pipe emissions of naval airplanes.	ba	neutral
+1000893	ba	ba	ba	ba	ba	ba	ba	The man adorned expensive Spanish clothing.	The man was adorned by expensive Spanish clothing.	ba	neutral
+1000887	ba	ba	ba	ba	ba	ba	ba	The bus stops seven times.	The bus is stopped by seven times.	ba	neutral
+2001368	ba	ba	ba	ba	ba	ba	ba	The discussions resolved the disputes.	The disputes were resolved by the discussions.	ba	entailment
+1002765	ba	ba	ba	ba	ba	ba	ba	The coin showed Washington struggling with a stylized lion.	The coin was shown by Washington struggling with a stylized lion.	ba	neutral
+2002492	ba	ba	ba	ba	ba	ba	ba	The board wants certain stewardship information to receive more audit scrutiny that it would if it were RSI.	Certain stewardship information to receive more audit scrutiny that it would if it were RSI are wanted by the board.	ba	entailment
+1002988	ba	ba	ba	ba	ba	ba	ba	The riverbank gives the best view.	The riverbank is given by the best view.	ba	neutral
+2000640	ba	ba	ba	ba	ba	ba	ba	The NIST issued numerous Federal Information Processing Standards.	Numerous Federal Information Processing Standards were issued by the NIST.	ba	entailment
+1001021	ba	ba	ba	ba	ba	ba	ba	The test uses three blood samples.	The test is used by three blood samples.	ba	neutral
+1002619	ba	ba	ba	ba	ba	ba	ba	The Turks call the Prince's Islands Adalar, The Islands.	The Turks is called by the Prince 's Islands Adalar , The Islands.	ba	neutral
+1000937	ba	ba	ba	ba	ba	ba	ba	The allies retook Caen in the summer of 1944.	The allies are retaken by Caen in the summer of 1944.	ba	neutral
+1002508	ba	ba	ba	ba	ba	ba	ba	The amount reflects the increase in terminal dues gross balance.	The amount is reflected by the increase in terminal dues gross balance.	ba	neutral
+2000549	ba	ba	ba	ba	ba	ba	ba	The Hittites dominated France.	France was dominated by the Hittites.	ba	entailment
+2000322	ba	ba	ba	ba	ba	ba	ba	A platform held the fire.	The fire was held by a platform.	ba	entailment
+1002621	ba	ba	ba	ba	ba	ba	ba	The man grabbed his spear.	The man was grabbed by his spear.	ba	neutral
+1002276	ba	ba	ba	ba	ba	ba	ba	The EITC helps millions of auditors every year.	The EITC is helped by millions of auditors every year.	ba	neutral
