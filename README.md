@@ -4,7 +4,7 @@ This repository contains the syntactic augmentation dataset to improve robustnes
 
 ## Data
 
-Augmentation datasets are in the [`datasets`](https://github.com/Aatlanties/qa2/datasets) folder. Each file is named using the following abbreviations:
+Augmentation datasets are in the [`datasets`](https://github.com/Aatlantise/qa2/datasets) folder. Each file is named using the following abbreviations:
 
 Transformation strategies:
 - `inv`: inversion
@@ -29,7 +29,7 @@ For example, [`pass_orig_pos_small.tsv`](https://github.com/Aatlantise/qa2/datas
 
 ## Script
 
-The attached `.tsv` data files were used to augment the MultiNLI training set in our experiments. They are randomly selected subsets or unions of subsets of transformations created by running [`qa2.py`](https://github.com/Aatlanties/qa2/qa2.py) on Python 2. It requires MultiNLI's json file to run.
+The attached `.tsv` data files were used to augment the MultiNLI training set in our experiments. They are randomly selected subsets or unions of subsets of transformations created by running [`qa2.py`](https://github.com/Aatlantise/qa2/qa2.py) on Python 2. It requires MultiNLI's json file to run.
 
 ## Config
 
