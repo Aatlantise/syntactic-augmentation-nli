@@ -4,7 +4,7 @@ This repository contains the syntactic augmentation dataset to improve robustnes
 
 ## Data
 
-Augmentation datasets are in the [`datasets`](https://github.com/Aatlantise/tree/master/qa2/datasets) folder. Each file is named using the following abbreviations:
+Augmentation datasets are in the [`datasets`](https://github.com/Aatlantise/qa2/tree/master/datasets) folder. Each file is named using the following abbreviations:
 
 Transformation strategies:
 - `inv`: inversion
