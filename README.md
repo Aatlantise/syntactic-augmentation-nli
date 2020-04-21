@@ -4,7 +4,7 @@ This repository contains the syntactic augmentation dataset to improve robustnes
 
 ## Data
 
-Augmentation datasets are in the [`datasets`](https://github.com/Aatlantise/qa2/datasets) folder. Each file is named using the following abbreviations:
+Augmentation datasets are in the [`datasets`](https://github.com/Aatlantise/tree/master/qa2/datasets) folder. Each file is named using the following abbreviations:
 
 Transformation strategies:
 - `inv`: inversion
@@ -25,13 +25,13 @@ Size:
 - `medium`: 405 examples
 - `large`: 1215 examples
 
-For example, [`pass_orig_pos_small.tsv`](https://github.com/Aatlantise/qa2/datasets/pass_orig_pos_small.tsv) is an set of 101 original premise-passivized hypothesis pair whose labels are entailment. Fields within each file are equivalent to those from the [MultiNLI](https://github.com/nyu-mll/multiNLI) dataset. However, only four fields `index`, `sentence1` (premise), `sentence2` (hypothesis), and `gold_label` are populated.
+For example, [`pass_orig_pos_small.tsv`](https://github.com/Aatlantise/qa2/tree/master/datasets/pass_orig_pos_small.tsv) is an set of 101 original premise-passivized hypothesis pair whose labels are entailment. Fields within each file are equivalent to those from the [MultiNLI](https://github.com/nyu-mll/multiNLI) dataset. However, only four fields `index`, `sentence1` (premise), `sentence2` (hypothesis), and `gold_label` are populated.
 
 ## Script
 
-The attached `.tsv` data files were used to augment the MultiNLI training set in our experiments. They are randomly selected subsets or unions of subsets of transformations created by running [`qa2.py`](https://github.com/Aatlantise/qa2/qa2.py) on Python 2. It requires MultiNLI's json file to run.
+The attached `.tsv` data files were used to augment the MultiNLI training set in our experiments. They are randomly selected subsets or unions of subsets of transformations created by running [`qa2.py`](https://github.com/Aatlantise/qa2/tree/master/qa2.py) on Python 2. It requires MultiNLI's json file to run.
 
 ## Config
 
-BERT parameters and other configurations used to train augmented models are included in the [`config`](https://github.com/Aatlanties/qa2/config) folder.
+BERT parameters and other configurations used to train augmented models are included in the [`config`](https://github.com/Aatlantise/qa2/tree/master/config) folder.
 
