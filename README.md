@@ -37,5 +37,9 @@ The attached `.tsv` data files were used to augment the MultiNLI training set in
 
 ## Config
 
-BERT parameters and other configurations used to train augmented models are included in the [`config`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/config) folder.
+In the [`config`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/config) folder, `bert_config.json` contains BERT configurations, while and `bert_mnli.sh` contains training parameters when BERT's [`run_classifier.py`](https://github.com/google-research/bert/blob/master/run_classifier.py) runs.
+
+## License
+
+This repository is licenced under the MIT [license](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/LICENSE.md).
 
