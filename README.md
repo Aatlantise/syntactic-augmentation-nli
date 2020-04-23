@@ -29,11 +29,11 @@ Size:
 - `medium`: 405 examples
 - `large`: 1215 examples
 
-For example, [`pass_orig_pos_small.tsv`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/datasets/pass_orig_pos_small.tsv) is an set of 101 original premise-passivized hypothesis pair whose labels are entailment. Fields within each file are equivalent to those from the [MultiNLI](https://github.com/nyu-mll/multiNLI) dataset. However, only four fields `index`, `sentence1` (premise), `sentence2` (hypothesis), and `gold_label` are populated.
+For example, [`pass_trsf_pos_small.tsv`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/datasets/pass_trsf_pos_small.tsv) is an set of 101 original hypothesis-passivized hypothesis pair whose labels are entailment. Fields within each file are equivalent to those from the [MultiNLI](https://github.com/nyu-mll/multiNLI) dataset. However, only four fields `index`, `sentence1` (premise), `sentence2` (hypothesis), and `gold_label` are populated.
 
 ## Script
 
-The attached `.tsv` data files were used to augment the MultiNLI training set in our experiments. They are randomly selected subsets or unions of subsets of transformations created by running [`generate_datasets.py`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/generate_datasets.py) on Python 2. It requires MultiNLI's json file to run.
+The attached `.tsv` data files were used to augment the MultiNLI training set in our experiments. They are randomly selected subsets or unions of subsets of transformations created by running [`generate_dataset.py`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/generate_dataset.py) on Python 2. It requires MultiNLI's json file to run.
 
 ## Config
 
