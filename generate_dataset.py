@@ -8,7 +8,7 @@ from pattern import en
 import spacy
 
 
-mnli_dir = os.path.expanduser('~/JHU/Research/Augmentation/')
+mnli_dir = os.path.expanduser('~/path/to/MultiNLI/data')
 mnli_train = os.path.join(mnli_dir, 'multinli_1.0_train.jsonl')
 mnli_headers = ['index', 'promptID', 'pairID', 'genre', 'sentence1_binary_parse', 'sentence2_binary_parse', 'sentence1_parse', 'sentence2_parse', 'sentence1', 'sentence2', 'label1', 'gold_label']
 
@@ -17,8 +17,6 @@ ner = nlp.create_pipe('ner')
 parser = nlp.create_pipe('parser')
 lemmatizer = nltk.stem.WordNetLemmatizer()
 
-def load_boolq_train():
-    return [json.loads(x) for x in open('boolq/train.jsonl').readlines()]
 
 def lower_first(s):
     return s[0].lower() + s[1:]        
@@ -26,41 +24,8 @@ def lower_first(s):
 def upper_first(s):
     return s[0].upper() + s[1:]        
 
-def find_two_entities():
-    for ex in train[:100]:
-        doc = nlp(ex['passage'])
-        if len([e for e in doc.ents if e.label_ == 'PERSON']) > 0:
-            print(doc, [(e.text, e.label_) for e in doc.ents])
-
-def visualize():
-    for i in train:
-        print(i['question'])
-        print(i['answer'])
-        print(i['passage'])
-        print()
-        
-def load_fiction():
-    fname = os.path.expanduser('~/JHU/Research/Augmentation/train.tsv')
-    reader = csv.DictReader(open(fname), delimiter='\t')
-    l = []
-    while True:
-        try:
-            row = next(reader)
-            if row['genre'] == 'travel':
-                l.append(row)
-        except StopIteration:
-            break
-        except Exception as e:
-            print(e)
-    return l
-
-
 
 class MNLISyntacticRegularizer(object):
-
-    # Potential refinements:
-    # Fix agreement features on verb if relevant:
-    # Everyone likes the benefits -> the benefits like everyone
 
     def __init__(self):
         self.present_to_past = {}
@@ -121,12 +86,10 @@ class MNLISyntacticRegularizer(object):
 
                 subj = ' '.join(s[0].flatten())
                 arguments = tuple(x.label() for x in s[1][1:])
-		#print("\n over")
+
                 if (arguments != ('NP',) or 
                         en.lemma(vp_head[0]) in ['be', 'have']):
-                    continue
-		#sliced vp_head to take only zeroth argument (the vp head itself, without tag) -JM
-		
+                    continue		
 
                 direct_object = ' '.join(s[1][1].flatten())
 
@@ -229,8 +192,7 @@ class MNLISyntacticRegularizer(object):
                 else:
                     passivizer = 'is'
                 vbn = en.conjugate(head, 'ppart')
-                #print(vp.flatten())
-                #print( #pdb.set_trace()
+
         return '%s %s by' % (passivizer, vbn)
 
     def get_np_head(self, np):
@@ -256,6 +218,6 @@ class MNLISyntacticRegularizer(object):
             number = en.PLURAL
         return number 
 
-test = MNLISyntacticRegularizer()
-test.loop()
+regularizer = MNLISyntacticRegularizer()
+regularizer.loop()
 
