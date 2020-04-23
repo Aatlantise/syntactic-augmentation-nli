@@ -3,6 +3,7 @@
 This repository contains the syntactic augmentation dataset to improve robustness in NLI, used in our ACL 2020 paper, Syntactic Data Augmentation Increases Robustness to Inference Heuristics, by Junghyun Min<sup>1</sup>, Tom McCoy<sup>1</sup>, Dipanjan Das<sup>2</sup>, Emily Pitler<sup>2</sup>, and Tal Linzen<sup>1</sup>.
 
 <sup>1</sup>Department of Cognitive Science, Johns Hopkins University, Baltimore, MD
+
 <sup>2</sup>Google AI Language, New York, NY
 
 ## Data
