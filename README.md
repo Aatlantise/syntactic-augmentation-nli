@@ -29,7 +29,7 @@ Size:
 - `medium`: 405 examples
 - `large`: 1215 examples
 
-For example, [`pass_trsf_pos_small.tsv`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/datasets/pass_trsf_pos_small.tsv) is an set of 101 original hypothesis-passivized hypothesis pair whose labels are entailment. Also, please note that the negative combined transformed-hypothesis nonentailed datasets (`comb_trsf_neg_large.tsv`, etc) are not discussed or reported in our paper.
+For example, [`pass_trsf_pos_small.tsv`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/datasets/pass_trsf_pos_small.tsv) is an set of 101 passivization with transformed hypothesis examples whose labels are entailment. Also, please note that the negative combined transformed-hypothesis nonentailed datasets (`comb_trsf_neg_large.tsv`, etc) are not discussed or reported in our paper.
 
 Fields within each file are equivalent to those from the [MultiNLI](https://github.com/nyu-mll/multiNLI) dataset. However, only four fields `index`, `sentence1` (premise), `sentence2` (hypothesis), and `gold_label` are populated. To finetune BERT with an augmented training set, you can concatenate an augmentation set to an existing training set `train.tsv`, and finetune BERT as you would on an unaugmented set.
 
