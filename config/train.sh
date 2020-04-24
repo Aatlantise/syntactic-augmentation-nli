@@ -1,5 +1,6 @@
-export BERT_BASE_DIR=uncased_L-12_H-768_A-12
-export GLUE_DIR=glue_data
+export BERT_BASE_DIR=path/to/base/model/like/uncased_L-12_H-768_A-12
+export GLUE_DIR=path/to/training/data
+export OUTPUT_DIR=path/to/output/data
 
 python run_classifier.py \
   --task_name=MNLI \
@@ -13,7 +14,7 @@ python run_classifier.py \
   --train_batch_size=32 \
   --learning_rate=2e-5 \
   --num_train_epochs=3.0 \
-  --output_dir=mnli_save
+  --output_dir=$OUTPUT_DIR
 
 
 
