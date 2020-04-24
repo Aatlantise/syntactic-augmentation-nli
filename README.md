@@ -45,7 +45,7 @@ In the [`config`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/
 
 ## Training and evaluating on MNLI and HANS
 
-If you already haven't downloaded MNLI data, now is the time. You can do so by running [download_glue_data.py](https://github.com/nyu-mll/GLUE-baselines/blob/master/download_glue_data.py). It includes files mentioned below like `train.tsv` and `test_matched.tsv`:
+If you already haven't downloaded BERT and MNLI data, now is the time. You can download BERT from its [repository](https://github.com/google-research/bert), and MNLI data from running [download_glue_data.py](https://github.com/nyu-mll/GLUE-baselines/blob/master/download_glue_data.py). It includes files mentioned below like `train.tsv` and `test_matched.tsv`:
 
 ```
 python download_glue_data.py --data_dir ~/download/path --tasks MNLI
