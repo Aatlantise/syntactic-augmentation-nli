@@ -45,16 +45,18 @@ In the [`config`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/
 
 ## Training and evaluating on MNLI and HANS
 
-If you already haven't downloaded MNLI data, now is the time. You can do so by running [download_glue_data.py](https://github.com/nyu-mll/GLUE-baselines/blob/master/download_glue_data.py). It will include files mentioned below like `train.tsv` and `test_matched.tsv`:
+If you already haven't downloaded MNLI data, now is the time. You can do so by running [download_glue_data.py](https://github.com/nyu-mll/GLUE-baselines/blob/master/download_glue_data.py). It includes files mentioned below like `train.tsv` and `test_matched.tsv`:
 
 ```
 python download_glue_data.py --data_dir ~/download/path --tasks MNLI
 ```
 
 To finetune BERT with an augmented training set, you can concatenate an augmentation set to training set `train.tsv`:
-```shuf -n1215 inv_trsf.tsv > inv_trsf_large.tsv
+
+```
+shuf -n1215 inv_trsf.tsv > inv_trsf_large.tsv
 mv train.tsv train_orig.tsv
-cat train_orig.tsv inv_trsf.tsv > train.tsv
+cat train_orig.tsv inv_trsf_large.tsv > train.tsv
 ```
 
 and finetune BERT as you would on an unaugmented set:
