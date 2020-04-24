@@ -36,10 +36,10 @@ class MNLISyntacticRegularizer(object):
         return csv.writer(open(filename, 'w'), delimiter='\t', encoding='utf-8')
 
     def loop(self, debug=False):
-        w_subjobj_orig = self.tsv('inv_orig.tsv')
-        w_subjobj_hap = self.tsv('inv_trsf.tsv')
-        w_passive_orig = self.tsv('pass_orig.tsv')
-        w_passive_hap = self.tsv('pass_trsf.tsv')
+        w_inv_orig = self.tsv('inv_orig.tsv')
+        w_inv_trsf = self.tsv('inv_trsf.tsv')
+        w_pass_orig = self.tsv('pass_orig.tsv')
+        w_pass_trsf = self.tsv('pass_trsf.tsv')
 
         self.lines = open(mnli_train).readlines()
         already_seen = set()
@@ -71,10 +71,10 @@ class MNLISyntacticRegularizer(object):
 
                 k = 1
                 
-                while (s[k].label() not in (u'VP', u'SBAR', u'ADJP')) and (k<len(s)-1):
+                while (s[k].label() not in (u'VP', u'SBAR', u'ADJP')) and (k < len(s) - 1):
                     k+=1
 
-                if k == len(s)-1:
+                if k == len(s) - 1:
                     continue
 		#iterate through top level branches to find VP
 
@@ -130,19 +130,19 @@ class MNLISyntacticRegularizer(object):
 
 
                 if j['gold_label'] == 'entailment':
-                    self.mnli_row(w_subjobj_orig, 1000000 + n,
+                    self.mnli_row(w_inv_orig, 1000000 + n,
                             j['sentence1'], subjobj_rev_hyp, 'neutral')
 
-                self.mnli_row(w_subjobj_hap, 1000000 + n,
+                self.mnli_row(w_inv_trsf, 1000000 + n,
                         j['sentence2'], subjobj_rev_hyp, 'neutral')
 
-                self.mnli_row(w_passive_orig, 1000000 + n,
+                self.mnli_row(w_pass_orig, 1000000 + n,
                         j['sentence1'], passive_hyp_same_meaning, 
                         j['gold_label'])
 
-                self.mnli_row(w_passive_hap, 1000000 + n,
+                self.mnli_row(w_pass_trsf, 1000000 + n,
                         j['sentence2'], passive_hyp_inverted, 'neutral')
-                self.mnli_row(w_passive_hap, 2000000 + n,
+                self.mnli_row(w_pass_trsf, 2000000 + n,
                         j['sentence2'], passive_hyp_same_meaning, 'entailment')
 
                 n += 1
