@@ -4,7 +4,7 @@ This repository contains the syntactic augmentation dataset to improve robustnes
 
 <sup>1</sup>Department of Cognitive Science, Johns Hopkins University, Baltimore, MD
 
-<sup>2</sup>Google AI Language, New York, NY
+<sup>2</sup>Google Research, New York, NY
 
 ## Data
 
@@ -31,16 +31,18 @@ Size:
 
 For example, [`pass_trsf_pos_small.tsv`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/datasets/pass_trsf_pos_small.tsv) is an set of 101 original hypothesis-passivized hypothesis pair whose labels are entailment. Also, please note that the negative combined transformed-hypothesis nonentailed datasets (`comb_trsf_neg_large.tsv`, etc) are not discussed or reported in our paper.
 
-Fields within each file are equivalent to those from the [MultiNLI](https://github.com/nyu-mll/multiNLI) dataset. However, only four fields `index`, `sentence1` (premise), `sentence2` (hypothesis), and `gold_label` are populated. To finetune BERT on augmented datasets, you can concatenate an augmentation set to an existing training set.
+Fields within each file are equivalent to those from the [MultiNLI](https://github.com/nyu-mll/multiNLI) dataset. However, only four fields `index`, `sentence1` (premise), `sentence2` (hypothesis), and `gold_label` are populated. To finetune BERT with an augmented training set, you can concatenate an augmentation set to an existing training set `train.tsv`, and finetune BERT as you would on an unaugmented set.
 
 
 ## Script
 
-The attached `.tsv` data files were used to augment the MultiNLI training set in our experiments. They are randomly selected subsets or unions of subsets of transformations created by running [`generate_dataset.py`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/generate_dataset.py) on Python 2. It requires MultiNLI's json file, like `multinli_1.0_train.jsonl` to run. Simply modify the MNLI path argument, and run `python2 generate_dataset.py`. This will create four files: `inv_orig.tsv`, `inv_trsf.tsv`, `pass_orig.tsv`, and `pass_trsf.tsv`. From these four files, individual augmentation sets similar to what is included in the `datasets` folder can be created by concatenating and / or subsetting using commands like `cat` and `shuf -n`.
+The attached `.tsv` data files were used to augment the MultiNLI training set in our experiments. They are randomly selected subsets or unions of subsets of transformations created by running [`generate_dataset.py`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/generate_dataset.py), which requires MultiNLI's json file, like `multinli_1.0_train.jsonl` to run. Simply modify the MNLI path argument before running `python2 generate_dataset.py`.
+
+This will create four files: `inv_orig.tsv`, `inv_trsf.tsv`, `pass_orig.tsv`, and `pass_trsf.tsv`. From these four files, individual augmentation sets similar to those included in the `datasets` folder can be created by concatenating and / or subsetting using commands like `cat` and `shuf -n`.
 
 ## Config
 
-In the [`config`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/config) folder, `bert_config.json` contains BERT configurations, while and `bert_mnli.sh` contains training parameters when BERT's [`run_classifier.py`](https://github.com/google-research/bert/blob/master/run_classifier.py) runs.
+In the [`config`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/config) folder, `bert_config.json` contains BERT configurations, while `bert_mnli.sh` contains training parameters when BERT's [`run_classifier.py`](https://github.com/google-research/bert/blob/master/run_classifier.py) runs.
 
 ## License
 
