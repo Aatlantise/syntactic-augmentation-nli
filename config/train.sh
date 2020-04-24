@@ -2,6 +2,8 @@ export BERT_BASE_DIR=path/to/base/model/like/uncased_L-12_H-768_A-12
 export GLUE_DIR=path/to/training/data
 export OUTPUT_DIR=path/to/output/data
 
+#Finetune BERT and evaluate on MNLI
+
 python run_classifier.py \
   --task_name=MNLI \
   --do_train=true \
