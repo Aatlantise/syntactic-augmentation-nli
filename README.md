@@ -35,33 +35,34 @@ Fields within each file are equivalent to the MNLI datasets downloadable from [G
 
 ## Script
 
-The attached `.tsv` data files were used to augment the MultiNLI training set in our experiments. They are randomly selected subsets or unions of subsets of transformations created by running [`generate_dataset.py`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/generate_dataset.py), which requires MultiNLI's json file, like `multinli_1.0_train.jsonl` to run. Simply modify the MNLI path argument before running `python2 generate_dataset.py`.
+The attached `.tsv` data files were used to augment the MultiNLI training set in our experiments. They are randomly selected subsets or unions of subsets of transformations created by running [`generate_dataset.py`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/generate_dataset.py), which requires MultiNLI's json file `multinli_1.0_train.jsonl` to run. Simply modify the MNLI path argument before running `python2 generate_dataset.py`.
 
 This will create four files: `inv_orig.tsv`, `inv_trsf.tsv`, `pass_orig.tsv`, and `pass_trsf.tsv`. From these four files, individual augmentation sets similar to those included in the `datasets` folder can be created by concatenating and / or subsetting using commands like `cat` and `shuf -n`.
 
 ## Config
 
-In the [`config`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/config) folder, `bert_config.json` contains BERT configurations, while `train.sh` and `hans_pred.sh` contains training, evaluation, and prediction parameters for running BERT's [`run_classifier.py`](https://github.com/google-research/bert/blob/master/run_classifier.py).
+In the [`config`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/config) folder, `bert_config.json` contains BERT configurations, while `train.sh` and `hans_pred.sh` contain training, evaluation, and prediction parameters for running BERT's [`run_classifier.py`](https://github.com/google-research/bert/blob/master/run_classifier.py).
 
 ## Training and evaluating on MNLI and HANS
 
-If you already haven't downloaded MNLI data, now is the time. You can do so by running [download_glue_data.py](https://github.com/nyu-mll/GLUE-baselines/blob/master/download_glue_data.py):
+If you already haven't downloaded MNLI data, now is the time. You can do so by running [download_glue_data.py](https://github.com/nyu-mll/GLUE-baselines/blob/master/download_glue_data.py). It will include files mentioned below like `train.tsv` and `test_matched.tsv`:
 
 ```
 python download_glue_data.py --data_dir ~/download/path --tasks MNLI
 ```
 
-To finetune BERT with an augmented training set, you can concatenate an augmentation set to an existing training set `train.tsv`:
+To finetune BERT with an augmented training set, you can concatenate an augmentation set to training set `train.tsv`:
 ```shuf -n1215 inv_trsf.tsv > inv_trsf_large.tsv
 mv train.tsv train_orig.tsv
 cat train_orig.tsv inv_trsf.tsv > train.tsv
 ```
 
 and finetune BERT as you would on an unaugmented set:
-```bash train.sh
+```
+bash train.sh
 ```
 
-Once the model is trained, you will see MNLI evaluation results in `eval_results.txt` in your output folder. They'll look something like this:
+Once the model is trained, it will also be evaluated on MNLI, and the results will be recorded in `eval_results.txt` in your output folder. It'll look something like this:
 
 ```
 eval_accuracy = 0.8471727
@@ -70,9 +71,9 @@ global_step = 36929
 loss = 0.48185167
 ```
 
-Alogn with the results file, you'll also see checkpoint files starting with `model.ckpt-some-number`. They are model weights at a particular point in training, the higher the number, the closer it is to completion of training. If you used large augmentation, you'll have `model.ckpt-36929` as your trained model.
+Along with the results file, you'll also see checkpoint files starting with `model.ckpt-some-number`. They are model weights at a particular point in training, the higher the number, the closer it is to completion of training. If you used large augmentation, you'll have `model.ckpt-36929` as your trained model.
 
-To evaluate the model on HANS, you'll need to have downloaded scripts and datasets from [HANS](https://github.com/tommccoy1/hans). And, format `heuristics_evaluation_set.txt` to resemble `test_matched.tsv` from GLUE and have fields `sentence1` (premise) and `sentence2` (hypothesis) as 9th and 10th fields. 
+To evaluate the model on HANS, you'll need to have downloaded scripts and datasets from [HANS](https://github.com/tommccoy1/hans). And, format `heuristics_evaluation_set.txt` to resemble `test_matched.tsv` and have fields `sentence1` (premise) and `sentence2` (hypothesis) as 9th and 10th fields. Other fields can be filled with dummy fillers. The formatted file will also need to be named `test_matched.tsv`, so it is a good idea to keep MNLI and HANS directories separate.
 
 Then, you can create the model's predictions on HANS:
 ```
@@ -85,6 +86,8 @@ Once it is finished, it will produce `test_results.tsv` in your output folder. T
 python process_results.py
 python evaluate_heur_output.py preds.txt
 ```
+
+This will output HANS performance by heuristic, by subcase, and by template.
 
 ## License
 
