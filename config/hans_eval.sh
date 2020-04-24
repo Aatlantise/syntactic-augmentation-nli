@@ -3,7 +3,7 @@ export HANS_DIR=path/to/hans
 export TRAINED_CLASSIFIER=path/to/trained/classifier
 export OUTPUT_DIR=path/to/output/folder
 
-#Evaluate trained model on HANS
+#Record trained model's predictions on HANS
 
 python run_classifier.py \
   --task_name=MNLI \
