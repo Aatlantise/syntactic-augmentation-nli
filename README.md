@@ -37,7 +37,7 @@ Fields within each file are equivalent to the MNLI datasets downloadable from [G
 
 The attached `.tsv` data files were used to augment the MultiNLI training set in our experiments. They are randomly selected subsets or unions of subsets of transformations created by running [`generate_dataset.py`](https://github.com/Aatlantise/syntactic-augmentation-nli/tree/master/generate_dataset.py), which requires MultiNLI's json file `multinli_1.0_train.jsonl` to run. Simply modify the MNLI path argument before running `python2 generate_dataset.py`.
 
-This will create four files: `inv_orig.tsv`, `inv_trsf.tsv`, `pass_orig.tsv`, and `pass_trsf.tsv`. From these four files, individual augmentation sets similar to those included in the `datasets` folder can be created by concatenating and / or subsetting using commands like `cat` and `shuf -n`.
+This will create four files: `inv_orig.tsv`, `inv_trsf.tsv`, `pass_orig.tsv`, and `pass_trsf.tsv`. From these four files, individual augmentation sets similar to those included in the `datasets` folder can be created by subsetting and/or concatenating.
 
 ## Config
 
