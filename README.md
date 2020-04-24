@@ -59,10 +59,7 @@ mv train.tsv train_orig.tsv
 cat train_orig.tsv inv_trsf_large.tsv > train.tsv
 ```
 
-and finetune BERT as you would on an unaugmented set:
-```
-bash train.sh
-```
+and finetune BERT as you would on an unaugmented set by running `train.sh`.
 
 Once the model is trained, it will also be evaluated on MNLI, and the results will be recorded in `eval_results.txt` in your output folder. It'll look something like this:
 
@@ -77,10 +74,7 @@ Along with the results file, you'll also see checkpoint files starting with `mod
 
 To evaluate the model on HANS, you'll need to have downloaded scripts and datasets from [HANS](https://github.com/tommccoy1/hans). And, format `heuristics_evaluation_set.txt` to resemble `test_matched.tsv` and have fields `sentence1` (premise) and `sentence2` (hypothesis) as 9th and 10th fields. Other fields can be filled with dummy fillers. The formatted file will also need to be named `test_matched.tsv`, so it is a good idea to keep MNLI and HANS directories separate.
 
-Then, you can create the model's predictions on HANS:
-```
-bash hans_pred.sh
-```
+Then, you can create the model's predictions on HANS with hans_pred.sh.
 
 Once it is finished, it will produce `test_results.tsv` in your output folder. To analyze it, you need to process the results:
 
